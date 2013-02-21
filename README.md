@@ -266,7 +266,7 @@ Bug reports should be sent to <stephen.vickers.sv@gmail.com>.
 
 # Changes
 
-## Version 1.0.0 - ?
+## Version 1.0.0 - 21/02/2013
 
  * Initial release
 
