@@ -22,7 +22,7 @@ function usage () {
 }
 
 if (process.argv[2] == "--add" && process.argv.length >= 4) {
-	service.add (process.argv[3], {scriptArgs: ["--run"]});
+	service.add (process.argv[3], {programArgs: ["--run"]});
 } else if (process.argv[2] == "--remove" && process.argv.length >= 4) {
 	service.remove (process.argv[3]);
 } else if (process.argv[2] == "--run") {

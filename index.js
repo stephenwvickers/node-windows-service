@@ -26,6 +26,11 @@ function add (name, options) {
 			: process.argv[1];
 	
 	serviceArgs.push (nodePath);
+
+	if (options && options.nodeArgs)
+		for (var i = 0; i < options.nodeArgs.length; i++)
+			serviceArgs.push (options.nodeArgs[i]);
+
 	serviceArgs.push (programPath);
 	
 	if (options && options.programArgs)

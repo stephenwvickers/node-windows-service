@@ -284,6 +284,8 @@ Handle<Value> Stop (const Arguments& args) {
 		rcode = args[0]->ToUint32 ()->Value ();
 	}
 	
+	set_status (SERVICE_STOP_PENDING, NO_ERROR, 0);
+	
 	pthread_cond_signal (&stop_service);
 	
 	set_status (SERVICE_STOPPED, NO_ERROR, rcode);
