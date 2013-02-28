@@ -286,6 +286,11 @@ Bug reports should be sent to <stephen.vickers.sv@gmail.com>.
 
  * Initial release
 
+## Version 1.0.1 - ?
+
+ * `runInitialised` was not set to `true` when the service is `run()` for the
+   first time in index.js
+
 # Roadmap
 
 In no particular order:

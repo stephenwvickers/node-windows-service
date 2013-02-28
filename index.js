@@ -2,7 +2,7 @@
 var util = require ("util");
 
 var serviceWrap;
-var run_initialised = false;
+var runInitialised = false;
 
 function getServiceWrap () {
 	if (! serviceWrap)
@@ -61,7 +61,7 @@ function run (stdoutLogStream, stderrLogStream, stopCallback) {
 		stderrLogStream = stdoutLogStream;
 	}
 
-	if (! run_initialised) {
+	if (! runInitialised) {
 		process.__defineGetter__('stdout', function() {
 			return stdoutLogStream;
 		});
@@ -75,6 +75,8 @@ function run (stdoutLogStream, stderrLogStream, stopCallback) {
 				stopCallback ();
 			}
 		}, 2000);
+		
+		runInitialised = true;
 	}
 	
 	getServiceWrap ().run ();
