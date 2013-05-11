@@ -1,6 +1,6 @@
 {
   "name": "windows-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Run Node.JS programs as native Windows Services.",
   "main": "index.js",
   "directories": {
@@ -23,5 +23,5 @@
   	 "windows-service"
   ],
   "author": "Stephen Vickers <stephen.vickers.sv@gmail.com>",
-  "license": "GPL"
+  "license": "MIT"
 }
