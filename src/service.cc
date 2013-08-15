@@ -72,8 +72,6 @@ VOID WINAPI handler (DWORD signal) {
 }
 
 VOID WINAPI run (DWORD argc, LPTSTR *argv) {
-	DWORD rcode = 0;
-
 	if (! (status_handle = RegisterServiceCtrlHandler ("", handler))) {
 		set_status (SERVICE_STOPPED, GetLastError (), 0);
 		return;
