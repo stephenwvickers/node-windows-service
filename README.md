@@ -292,6 +292,11 @@ Bug reports should be sent to <stephen.vickers.sv@gmail.com>.
    first time in index.js
  * Use MIT license instead of GPL
 
+## Version 1.0.2 - 15/08/2013
+
+ * The variable `rcode` in the `run()` function defined in `service.cc` was
+   not used
+
 # Roadmap
 
 In no particular order:

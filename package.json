@@ -1,6 +1,6 @@
 {
   "name": "windows-service",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Run Node.JS programs as native Windows Services.",
   "main": "index.js",
   "directories": {
