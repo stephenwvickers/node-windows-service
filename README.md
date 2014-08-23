@@ -129,22 +129,6 @@ error.
 This behaviour results in a program which can be run either at the console or
 the Windows Service Control Manager with no change.
 
-# Issues When Stopping Service Programs
-
-The Windows Service Controller can sometimes report a service has failed to
-stop when in fact it has stopped.
-
-The Windows Service Controller reports this on sporadic occasions, and after
-investigation nothing would suggest the service stop code behaves incorrectly.
-Therefore the error can be ignored.
-
-The error can be reported even when the exact same sequence of events occur
-(i.e. all threads stop in the same order, and the service status is reported
-correctly).
-
-Suggestions or solutions to this will be greatly received.  Although this
-behaviour seems to cause no harm, it is nonetheless very annoying.
-
 # Current Working Directory
 
 Upon starting the current working directory of a service program will be the
@@ -296,6 +280,11 @@ Bug reports should be sent to <stephen.vickers.sv@gmail.com>.
 
  * The variable `rcode` in the `run()` function defined in `service.cc` was
    not used
+
+## Version 1.0.3 - 23/08/2014
+
+ * Windows reports an error when stopping the service, indicate to Windows
+   the service is stopping to prevent Windows from generating an error
 
 # Roadmap
 

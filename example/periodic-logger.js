@@ -1,18 +1,11 @@
 
 /**
- ** To run this example program you will need to move it to a directory where
- ** the windows-service module can be found by node, otherwise the service
- ** will fail to start.
- **
- ** This example program will not run out of the example directory, it serves
- ** merely as a reference for you.
- **
- ** When running as a service the current working directory will be the
- ** "%windir%\system32" directory (i.e. c:\windows\system32)
+ ** Change to the examples directory so this program can run as a service.
  **/
+process.chdir(__dirname);
 
 var fs = require ("fs");
-var service = require ("windows-service");
+var service = require ("../");
 
 function usage () {
 	console.log ("usage: node periodic-logger --add <name>");

@@ -62,6 +62,7 @@ VOID WINAPI handler (DWORD signal) {
 	switch (signal) {
 		case (SERVICE_CONTROL_STOP):
 		case (SERVICE_CONTROL_SHUTDOWN):
+			set_status(SERVICE_STOP_PENDING, NO_ERROR, 0);
 			pthread_mutex_lock (&stop_requested_mtx);
 			stop_requested = true;
 			pthread_mutex_unlock (&stop_requested_mtx);
