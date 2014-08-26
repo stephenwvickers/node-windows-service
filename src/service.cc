@@ -88,17 +88,21 @@ VOID WINAPI run (DWORD argc, LPTSTR *argv) {
 DWORD __stdcall run_thread (LPVOID param) {
 	SERVICE_TABLE_ENTRY table[] = {{"", run}, {0, }};
 
-	StartServiceCtrlDispatcher (table);
-	
-	while (1) {
-		DWORD status;
-		BOOL rcode = GetExitCodeThread (node_thread_handle, &status);
-		
-		if (! rcode)
-			break;
-		
-		if (status != STILL_ACTIVE)
-			break;
+	if (StartServiceCtrlDispatcher (table)) {
+		while (1) {
+			DWORD status;
+			BOOL rcode = GetExitCodeThread (node_thread_handle, &status);
+
+			if (! rcode)
+				break;
+
+			if (status != STILL_ACTIVE)
+				break;
+		}
+	} else {
+		while (1) {
+			Sleep(60000);
+		}
 	}
 
 	ExitThread (0);
