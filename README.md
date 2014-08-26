@@ -286,6 +286,10 @@ Bug reports should be sent to <stephen.vickers.sv@gmail.com>.
  * Windows reports an error when stopping the service, indicate to Windows
    the service is stopping to prevent Windows from generating an error
 
+## Version 1.0.4 - 26/08/2014
+
+ * High CPU utilisation when running services as console programs
+
 # Roadmap
 
 In no particular order:
