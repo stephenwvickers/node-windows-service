@@ -1,5 +1,11 @@
 
-# windows-service - [homepage][homepage]
+# windows-service
+
+**NOTE** This module has been deprecated in favour of the
+[os-service][os-service] module, please use that module instead.  The two
+modules differ in that the `add()` and `remove()` functions require a callback.
+
+[os-service]: https://www.npmjs.com/package/os-service
 
 This module implements the ability to run a [Node.js][nodejs] based JavaScript
 program as a native Windows service.
@@ -29,7 +35,6 @@ A program can then be added, removed and run as a Windows service:
         service.stop ();
     });
 
-[homepage]: http://re-tool.org "Homepage"
 [nodejs]: http://nodejs.org "Node.js"
 [npm]: https://npmjs.org/ "npm"
 
@@ -289,6 +294,10 @@ Bug reports should be sent to <stephen.vickers.sv@gmail.com>.
 ## Version 1.0.4 - 26/08/2014
 
  * High CPU utilisation when running services as console programs
+
+## Version 1.1.0 - 20/09/2015
+
+ * Host repository on GitHub
 
 # Roadmap
 
